@@ -16,22 +16,26 @@ header {
 
 nav ul {
     list-style: none;
-    padding: 0;
+    margin-top: 10px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
+
 nav ul li a:hover {
-    color: #f39c12;
-  }
+    background-color: #007bff;
+    border-radius: 5px;
+}
 /* Hero section */
 .hero {
     background-color: #007bff;
