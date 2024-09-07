@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My Online Store</title>
-    <link rel="stylesheet" href="stylehome.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="stylestore.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,11 +14,13 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()" />
 
     <section class="hero">
         <h2 class="slide-in">Discover Our Latest Products</h2>
@@ -26,25 +28,25 @@
         <a href="products.html" class="btn scale-up">Shop Now</a>
     </section>
 
-    <section class="featured-products fade-in">
+    <section class="featured-products fade-in" id="featured-products">
         <h2>Featured Products</h2>
-        <div class="product">
+        <div class="product" id="product1">
             <img src="https://media.croma.com/image/upload/v1705640288/Croma%20Assets/Communication/Mobiles/Images/303838_oqpio4.png" alt="Featured Product 1">
             <h3>Samsung S24</h3>
             <p>$799</p>
-            <a href="products.html" class="btn">View Details</a>
+            <button onclick="addToCart('Featured Product 1', 799)">Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" id="product2">
             <img src="https://cdnprod.mafretailproxy.com/sys-master-root/h3b/hd3/11658063904798/1752244_main.jpg_1700Wx1700H" alt="Featured Product 2">
             <h3>Playstation 5</h3>
             <p>$399</p>
-            <a href="products.html" class="btn">View Details</a>
+            <button onclick="addToCart('Featured Product 2', 399)">Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" id="product3">
             <img src="https://media-cdn.bnn.in.th/246361/iPad_Pro_Wi-Fi_11_in_4th_Gen_Space_Gray_2-square_medium.jpg" alt="Featured Product 3">
             <h3>iPad Pro 11</h3>
             <p>$499</p>
-            <a href="products.html" class="btn">View Details</a>
+            <button onclick="addToCart('Featured Product 3', 499)">Add to Cart</button>
         </div>
     </section>
 
@@ -53,9 +55,10 @@
         <p>We offer a wide range of products to suit your needs. Our mission is to provide high-quality items at affordable prices. Shop with us and experience excellent customer service.</p>
     </section>
 
+    <button id="scroll-top" onclick="scrollToTop()">Scroll to Top</button>
+
     <footer>
         <p>&copy; 2024 My Online Store</p>
     </footer>
-
 </body>
 </html>

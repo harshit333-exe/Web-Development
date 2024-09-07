@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cartstyle.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-container">
+        <h2>Your Cart</h2>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Items will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p><strong>Total Price: $<span id="total-price">0</span></strong></p>
+            <button id="checkout-btn" class="btn">Checkout</button>
+            <button id="clear-cart-btn" class="btn">Clear Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
+</body>
+</html>
